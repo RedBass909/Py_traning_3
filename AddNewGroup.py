@@ -3,7 +3,6 @@
 from selenium.webdriver.firefox.webdriver import WebDriver
 from selenium.webdriver.common.by import By
 from group import Group
-from selenium.common.exceptions import NoSuchElementException
 import unittest
 
 class AddNewGroup(unittest.TestCase):
@@ -64,7 +63,7 @@ class AddNewGroup(unittest.TestCase):
         wd.find_element(By.XPATH, "//input[@value='Login']").click()  # (xpath = //input[@value='Login'])
 
     def open_home_page(self, wd):
-        wd.get("http://localhost/addressbook/group.php")
+       wd.get("http://localhost/addressbook/group.php")
 
     def tearDown(self):
         self.wd.quit()
